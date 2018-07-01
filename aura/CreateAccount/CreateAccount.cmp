@@ -1,0 +1,24 @@
+<aura:component controller="CreateAccountController" implements="flexipage:availableForRecordHome,force:hasRecordId">
+
+    <div class="slds-page-header" role="banner">
+        <p class="slds-text-heading_label">Create Account</p>
+    </div>
+
+    <!-- Display the new contact form -->
+    <div class="slds-form_stacked">
+        <lightning:recordEditForm objectApiName="Account">
+            <lightning:messages />
+            <lightning:inputField fieldName="Name" />
+            <lightning:inputField fieldName="Type" />
+            <lightning:inputField fieldName="NumberOfEmployees" />
+            <lightning:inputField fieldName="Checkbox__c" />
+            <lightning:inputField fieldName="Related_Account__c"/>
+            <lightning:inputField fieldName="SLAExpirationDate__c"/>
+            <lightning:inputField fieldName="Multiselect_Picklist__c"/>
+            <lightning:button type="submit" label="save" name="save" />
+        </lightning:recordEditForm>
+    </div>
+    
+
+
+</aura:component>

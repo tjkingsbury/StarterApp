@@ -1,0 +1,16 @@
+<!--
+ - Created by Turbo_000 on 7/1/2018.
+ -->
+
+<aura:component description="transferAccounts" controller="TransferAccountsController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+
+    <!-- Create attribute to store lookup value as a sObject-->
+    <aura:attribute name="oldOwner" type="sObject" default="{}"/>
+    <aura:attribute name="newOwner" type="sObject" default="{}"/>
+
+    <c:customLookup objectAPIName="user" IconName="standard:user" selectedRecord="{!v.oldOwner}" label="Old Owner"/>
+    <c:customLookup objectAPIName="user" IconName="standard:user" selectedRecord="{!v.newOwner}" label="New Owner"/>
+
+
+    <lightning:button label="Transfer Accounts" onclick="{!c.transferAccountsButton}"/>
+</aura:component>
