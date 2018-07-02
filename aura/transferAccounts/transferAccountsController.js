@@ -42,8 +42,7 @@
 
                     var resultsToast = $A.get("e.force:showToast");
                                     resultsToast.setParams({"title" : "error"
-                                    ,"message":"error: " + errors[0].message
-                                    ,"type":"error"});
+                                    ,"message":"error: " + errors[0].message,"type":"error"});
                                     resultsToast.fire();
                 } else {
                     console.log("Unknown error");
